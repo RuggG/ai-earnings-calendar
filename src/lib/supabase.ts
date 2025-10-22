@@ -12,8 +12,4 @@ if (!serviceRoleKey) {
   throw new Error("SUPABASE_SERVICE_ROLE_KEY must be set");
 }
 
-export const supabase = createClient(supabaseUrl, serviceRoleKey, {
-  db: {
-    schema: "librarian",
-  },
-});
+export const supabase = createClient(supabaseUrl, serviceRoleKey);
